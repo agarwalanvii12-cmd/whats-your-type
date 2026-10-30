@@ -1,0 +1,30 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #efe9dc; color: #1d1d1b; font-family: 'Space Mono', monospace; }
+[hidden] { display: none !important; }
+
+#stage { position: relative; width: 900px; height: 600px; margin: 40px auto 24px; box-shadow: 6px 6px 0 #1d1d1b; }
+#stage canvas { display: block; }
+
+/* live font morph: your type forming in the corner */
+#morph {
+  width: 900px; margin: 0 auto 40px; text-align: right;
+  font-family: 'Roboto Flex', sans-serif; font-size: 76px; line-height: 1;
+  pointer-events: none;
+}
+#morph::before {
+  content: 'your type, forming'; display: block;
+  font-family: 'Space Mono', monospace; font-size: 11px; font-variation-settings: normal;
+  opacity: .6; margin-bottom: 4px;
+}
+
+/* result: your name in your font */
+#specimen { position: absolute; left: 0; right: 0; top: 70px; text-align: center; }
+#specimen .specimen { font-family: 'Roboto Flex', sans-serif; font-size: 64px; line-height: 1.05; }
+#specimen.small .specimen { font-size: 40px; }
+#specimen input {
+  font-family: 'Space Mono', monospace; font-size: 13px; margin-top: 8px;
+  border: 2px solid #1d1d1b; padding: 6px 10px; background: #fff; width: 200px;
+}
+
+.back { position: fixed; left: 16px; top: 12px; font-size: 13px; color: #1d1d1b; }
+.tag { position: fixed; right: 16px; top: 12px; font-size: 11px; opacity: .6; }

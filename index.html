@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What's Your Type? · v2 prototypes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght@8..144,-10..0,25..151,100..1000&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #efe9dc; color: #1d1d1b; font-family: 'Space Mono', monospace; }
+    main { max-width: 860px; margin: 60px auto; padding: 0 24px; }
+    h1 { font-family: 'Roboto Flex', sans-serif; font-size: 72px; line-height: 1; margin: 0 0 8px;
+         font-variation-settings: "wght" 900, "wdth" 140, "slnt" -6; }
+    p { font-size: 14px; max-width: 560px; }
+    ul { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
+    a.card { display: block; background: #fff; border: 2px solid #1d1d1b; box-shadow: 5px 5px 0 #1d1d1b;
+             padding: 18px; color: inherit; text-decoration: none; min-height: 170px; }
+    a.card:hover { background: #ffe14d; transform: translate(2px, 2px); box-shadow: 3px 3px 0 #1d1d1b; }
+    a.card b { font-family: 'Roboto Flex', sans-serif; font-size: 22px; display: block; margin-bottom: 8px; }
+    a.card span { font-size: 12px; }
+    footer { margin-top: 48px; font-size: 12px; opacity: .7; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>What's Your Type?</h1>
+    <p>A designer's personality test. Three grey-box prototypes of the same quiz engine, each with 2 questions and a result. Try all three, then tell me which one you'd actually finish.</p>
+    <ul>
+      <li><a class="card" href="pencil-case/"><b>The Pencil Case</b><span>Every piece of stationery has a design test for you.</span></a></li>
+      <li><a class="card" href="report-card/"><b>The Type Report Card</b><span>Your design homework gets graded, and the grade is a font.</span></a></li>
+      <li><a class="card" href="zine-club/"><b>The Zine Club</b><span>Make a zine, one spread at a time. Bind it to get your type.</span></a></li>
+    </ul>
+    <footer>ID2116 Computing for Design · Project 02 v2 · process notes live in <code>/process</code></footer>
+  </main>
+</body>
+</html>
