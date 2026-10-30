@@ -5,7 +5,7 @@
 //  - On GitHub Pages, paste your full Vercel URL below, e.g.
 //    'https://whats-your-type.vercel.app/api/comment'
 //  - null = use the built-in template comment.
-const VERCEL_URL = null; // <- paste 'https://<your-project>.vercel.app' here after deploying
+const VERCEL_URL = 'https://whats-your-type-ochre.vercel.app';
 
 window.WYT_CONFIG = {
   aiEndpoint: location.hostname.endsWith('vercel.app')

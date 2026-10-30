@@ -19,3 +19,4 @@ Newest at the bottom. One line per decision, with the *why*.
 ## Next
 - [ ] Playtest all three prototypes with 3 to 5 people. Note which one they finish and what they say.
 - [ ] Pick one concept.
+- Deployed the proxy on Vercel: https://whats-your-type-ochre.vercel.app (AI comment verified working). GitHub Pages copy calls the same endpoint.
