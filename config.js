@@ -1,6 +1,14 @@
 // Public config. This file is served to every visitor, so NO SECRETS here.
-// aiEndpoint: URL of a serverless proxy (Vercel / Cloudflare Worker) that holds the
-// OpenAI key and returns { text }. Leave null to use the built-in template comments.
+//
+// aiEndpoint: where core/ai.js asks for the AI comment.
+//  - On Vercel, the proxy lives on the same site, so '/api/comment' just works.
+//  - On GitHub Pages, paste your full Vercel URL below, e.g.
+//    'https://whats-your-type.vercel.app/api/comment'
+//  - null = use the built-in template comment.
+const VERCEL_URL = null; // <- paste 'https://<your-project>.vercel.app' here after deploying
+
 window.WYT_CONFIG = {
-  aiEndpoint: null,
+  aiEndpoint: location.hostname.endsWith('vercel.app')
+    ? '/api/comment'
+    : VERCEL_URL ? VERCEL_URL + '/api/comment' : null,
 };

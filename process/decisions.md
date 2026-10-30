@@ -13,6 +13,9 @@ Newest at the bottom. One line per decision, with the *why*.
 - Illustrations are **grey boxes for now**: the final drawings will be hand-made so it doesn't look AI-generated.
 - The OpenAI key is kept out of the public repo; the AI comment goes through a proxy, with a template fallback.
 
+- Chose a **Vercel serverless proxy** (`api/comment.js`) for the AI comment instead of asking users to paste a key: playtesters and graders get the real AI result with zero setup, and the class's shared key stays out of the public repo (OpenAI auto-disables keys leaked on GitHub).
+- The three AI **voices** (chatty stationery, dramatic teacher, zine editor) live server-side, so the endpoint can't be used as a general chatbot.
+
 ## Next
 - [ ] Playtest all three prototypes with 3 to 5 people. Note which one they finish and what they say.
 - [ ] Pick one concept.

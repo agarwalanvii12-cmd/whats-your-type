@@ -13,6 +13,8 @@ gives you a font + archetype. Built in p5.js, hosted on GitHub Pages.
   - `ai.js` result comment via `WYT_CONFIG.aiEndpoint`, local template fallback
   - `ui.js` buttons, grey boxes, speech bubbles, hosts
 - `pencil-case/`, `report-card/`, `zine-club/` one skin per pitch (`index.html` + `sketch.js`)
+- `api/comment.js` Vercel serverless proxy for OpenAI. Key = env var `OPENAI_API_KEY` in the Vercel dashboard ONLY.
+  The AI voices / system prompts live here. Add new allowed sites to `ALLOWED_ORIGINS`.
 - `assets/` Anvii's own drawings. `process/` design-decision log for the documentation.
 
 ## Rules

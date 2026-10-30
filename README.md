@@ -21,9 +21,14 @@ python3 -m http.server
 ```
 Open http://localhost:8000. Or enable GitHub Pages (Settings -> Pages -> Deploy from branch `main`, folder `/root`).
 
-## AI comment
-Set `aiEndpoint` in `config.js` to a serverless proxy that holds the OpenAI key and returns `{ "text": "..." }`.
-Without it, a built-in template writes the comment. **Never commit an API key.**
+## AI comment (Vercel proxy)
+`api/comment.js` is a serverless function that calls OpenAI with a key stored in Vercel, never in this repo.
+1. vercel.com -> Add New -> Project -> import this repo. Framework preset: **Other**. No build command.
+2. Before deploying, add Environment Variable `OPENAI_API_KEY` = your key.
+3. Deploy. The Vercel site uses the AI comment automatically.
+4. For the GitHub Pages copy, set `VERCEL_URL` in `config.js` to your Vercel URL.
+
+Without a proxy, a built-in template writes the comment. **Never commit an API key.**
 
 ## Process
 Design decisions are logged in [`process/decisions.md`](process/decisions.md).
